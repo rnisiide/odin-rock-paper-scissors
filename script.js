@@ -37,6 +37,8 @@ function game() {
 
             if (playerScore > computerScore) {
                 return 'Player wins. COMPUTER SUCKS!!!'
+            } else if (playerScore === computerScore) {
+                return "It's a draw. YOU BOTH SUCK and don't know how to play. BOOHOO"
             } else {return 'Computer wins!! COMPUTER APOCALIPSE INCOMING!!!'}
 
         }
@@ -46,6 +48,8 @@ function game() {
               
     }  
     console.log(result());
+    playerScore = 0;
+    computerScore = 0;
 }
 
 
