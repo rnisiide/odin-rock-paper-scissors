@@ -13,15 +13,20 @@ body {
 }
 #wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    flex-shrink: 1;
 }
 
 #humanColumn, #computerColumn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     
+}
+
+.game {
+    order: -1;
 }
 
 .modal {
@@ -49,7 +54,7 @@ body {
     position:relative;
     padding:0;
     outline:0;
-    width:600px;
+    width:300px;
     height:300px;
     border-radius: 15px;
     border-style: solid;
@@ -61,15 +66,15 @@ body {
     background-color: #737df9;
     color: white;
     font-size: 30px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #modalPara {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 30px;
     flex-grow: 1;
     flex-wrap: wrap;
 
@@ -81,14 +86,18 @@ body {
     background-color: #e73f98;
     color: white;
     font-size: 30px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#container {
+    padding: 10px;
 }
 
 .content {
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -97,21 +106,27 @@ body {
 
 #buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
+    flex-shrink: auto;
+    flex-grow: auto; 
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .btn {
-    margin: 30px;
     font-family: 'Roboto', sans-serif;
-    size: 20px;
+    flex: auto;  
 }
 
 .title {
     text-align: center;
     font-family: 'Creepster', cursive;
     color: yellow;
-    font-size: 100px;
+    font-size: 50px;
     margin: 0;
     padding: 0;
 }
@@ -145,8 +160,8 @@ h2 {
     font-size: 100px;
     background-color: #a6a6a6;  
     font-family: 'Roboto', sans-serif;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -157,8 +172,8 @@ h2 {
 }
 .hands {
     display: flex;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-style: solid;
     border-color: #a6a6a6;
     border-radius: 20px; 
@@ -177,3 +192,36 @@ h2 {
     font-size: 30px;
 }
 
+@media (min-width: 1000px) {
+    #wrapper {
+      flex-direction: row;
+    }
+    #humanColumn, #computerColumn {
+        flex-direction: column;
+        
+    }
+    .hands {
+        width: 200px;
+        height: 200px;
+        flex-direction: row;
+    }
+    .playerText, .computerText{
+        width: 200px;
+        height: 200px;}
+
+    .title {
+        font-size: 100px;
+    }
+
+    .modal-content{
+        width: 600px;
+    }
+    
+    .game {
+        order: 0;
+    }
+    .content {
+        font-size: 30px;
+    
+    }
+  }
