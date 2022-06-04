@@ -1,33 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <h1>Do you want to play a game?</h1>
-    <p>This is a simple Rock, Paper and Scissors game. For now, it is still played in the Console Log:</p>
-    <ol>
-        <li> Press F12 to open Dev Tools, and go to CONSOLE.</li>
-        <li> Type in the console the function: <strong>game()</strong> </li>
-        <li> A prompt will appear to choose one of the following values:
-        <ul>
-            <li>Rock</li>
-            <li>Paper</li>
-            <li>Scissors</li>
-        </ul></li>
-        <li> There will be 5 rounds. You can choose different values each time.</li>
-        <li> The values are case iNsEnSiTivE, so you don't need to worry about CAps LoCk. However, you have to spell it properly, or it will return an INVALID OPTION.</li>
-        <li> After 5 rounds the result will show in the end!! </li>
-        <li> You can start a new game with the function: <strong>game()</strong></li>
-    </ol>
 
-    <h2> Good luck!!</h2>
-
+<div id="wrapper"> <!--wrapper-->
     
+    <div id='humanColumn'>
+        <div class="choice">
+            <h2>Human Choice</h2>
+            <div id="humanImage" class="hands"></div>
+        </div>
+        <div class="player">
+            <h2>Human Score:</h2>
+            <div class="playerText">0</div>
+        </div>
+    </div> <!--Player choice-->
 
+    <div class="game"> <!--Game-->
+        <p class="title">ZOMBIES ATE MY HAND<p>
+
+        <div id="buttons">
+            <div id="rock" class="btn"><img src="./images/zombie-rock.png" height="300px" width="300px"> 
+            <div class="option">Rock</div></div>
+            <div id="paper" class="btn"><img src="./images/zombie-paper.png" height="300px" width="300px"> 
+            <div class="option">Paper</div></div>
+            <div id="scissors" class="btn"><img src="./images/zombie-scissors.png" height="300px" width="300px"> 
+            <div class="option">Scissors</div></div>
+        </div>
+
+        <div id="container">
+            <p class='content'>Your hand was eaten by a zombie. OH NO!!! </p>
+            <p class="content">Now you have to win 5 rounds of Rock, Paper, Scissors to save your other hand!!!</p>
+        </div>
+
+      
+    </div>
+
+  
+    <div id="computerColumn" >
+        <div class="choice">
+            <h2>Zombie Choice</h2>
+            <div id="computerImage" class="hands"></div>
+        </div>
+        <div class="computer">
+            <h2>Zombie Score:</h2>
+            <div class="computerText">0</div>
+        </div>
+    </div> 
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div id="modalh1">TEST 1</div>
+        <div id="modalPara"> TEST 2</div>
+        <div id="modalSpan"><span>RESET</span></div>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>
