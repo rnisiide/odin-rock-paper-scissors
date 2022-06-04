@@ -126,7 +126,7 @@ img {
     text-align: center;
     font-family: 'Creepster', cursive;
     color: yellow;
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
     padding: 0;
 }
@@ -160,8 +160,8 @@ h2 {
     font-size: 100px;
     background-color: #a6a6a6;  
     font-family: 'Roboto', sans-serif;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -172,8 +172,8 @@ h2 {
 }
 .hands {
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-style: solid;
     border-color: #a6a6a6;
     border-radius: 20px; 
@@ -181,15 +181,9 @@ h2 {
 }
 
 
-.pick {
-    width: 200px;
-    height: 200px;
-    margin: 0;
-    padding: 0;
-}
 
 .result {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 @media (min-width: 1000px) {
@@ -199,6 +193,9 @@ h2 {
     #humanColumn, #computerColumn {
         flex-direction: column;
         
+    }
+    .result {
+        font-size: 30px;
     }
     .hands {
         width: 200px;
